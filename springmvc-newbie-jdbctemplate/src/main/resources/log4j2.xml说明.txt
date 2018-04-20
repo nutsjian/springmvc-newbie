@@ -1,0 +1,7 @@
+这里有两个 log4j2.xml 日志配置文件
+1. log4j2.xml
+这个文件适用于在 jetty:run 启动的时候，因为其中没有使用 weblookup，动态的绑定变量 ${web.rootDir}。
+在 jetty:run 启动的时候会报错，说找不到 weblookup，所以我在里面定义了 LOG_HOME 变量，即日志存放的根路径
+
+2. log4j2.xml.bak
+这个文件用于 tomcat 启动，可以通过 weblookup 来查找变量，可以使用 ${web.rootDir}，生成的日志就在项目的根路径下的 logs 目录下
