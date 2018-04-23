@@ -3,7 +3,7 @@
 <!-- OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
 <Configuration status="WARN">
     <Properties>
-        <Property name="LOG_HOME">C:/nutsjian/develop_logs/springmvc-newbie-kisso</Property>
+        <Property name="LOG_HOME">C:/nutsjian/develop_logs/springmvc-newbie-websocket</Property>
         <!--<Property name="LOG_NAME">log</Property>-->
     </Properties>
 

@@ -1,0 +1,21 @@
+java.net.SocketTimeoutException: Timeout on Read
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onReadTimeout(AbstractWebSocketConnection.java:592) [websocket-common-9.4.6.v20170531.jar:9.4.6.v20170531]
+	at org.eclipse.jetty.io.AbstractConnection.onFillInterestedFailed(AbstractConnection.java:170) [jetty-io-9.4.6.v20170531.jar:9.4.6.v20170531]
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onFillInterestedFailed(AbstractWebSocketConnection.java:538) [websocket-common-9.4.6.v20170531.jar:9.4.6.v20170531]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.failed(AbstractConnection.java:285) [jetty-io-9.4.6.v20170531.jar:9.4.6.v20170531]
+	at org.eclipse.jetty.io.FillInterest.onFail(FillInterest.java:140) [jetty-io-9.4.6.v20170531.jar:9.4.6.v20170531]
+	at org.eclipse.jetty.io.AbstractEndPoint.onIdleExpired(AbstractEndPoint.java:398) [jetty-io-9.4.6.v20170531.jar:9.4.6.v20170531]
+	at org.eclipse.jetty.io.IdleTimeout.checkIdleTimeout(IdleTimeout.java:166) [jetty-io-9.4.6.v20170531.jar:9.4.6.v20170531]
+	at org.eclipse.jetty.io.IdleTimeout$1.run(IdleTimeout.java:50) [jetty-io-9.4.6.v20170531.jar:9.4.6.v20170531]
+	at java.util.concurrent.Executors$RunnableAdapter.call$$$capture(Executors.java:511) [?:1.8.0_161]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java) [?:1.8.0_161]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [?:1.8.0_161]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:1.8.0_161]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_161]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+[参考解决方案]
+https://stackoverflow.com/questions/23622565/jetty-websocket-read-timeout?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa

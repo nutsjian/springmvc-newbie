@@ -1,3 +1,5 @@
 mvn archetype:generate -DgroupId=me.nutsjian -DartifactId=springmvc-newbie-jdbctemplate -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DarchetypeCatalog=local -Dversion=0.0.1 -X
 
 mvn archetype:generate -DgroupId=me.nutsjian -DartifactId=springmvc-newbie-kisso -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DarchetypeCatalog=local -Dversion=0.0.1 -X
+
+mvn archetype:generate -DgroupId=me.nutsjian -DartifactId=springmvc-newbie-websocket -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DarchetypeCatalog=local -Dversion=0.0.1 -X

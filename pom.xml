@@ -190,5 +190,6 @@
     <modules>
     <module>springmvc-newbie-jdbctemplate</module>
     <module>springmvc-newbie-kisso</module>
+    <module>springmvc-newbie-websocket</module>
   </modules>
 </project>
