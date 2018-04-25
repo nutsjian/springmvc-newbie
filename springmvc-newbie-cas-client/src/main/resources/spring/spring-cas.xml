@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!--鉴权过滤器，当不通过时就到sso进行登录-->
+	<bean name="authenticationFilter" class="org.jasig.cas.client.authentication.AuthenticationFilter">
+		<property name="casServerLoginUrl" value="${cas.server.url}" />
+		<property name="service" value="${cas.demo.url}" />
+	</bean>
+
+	<!--验证票据过滤器-->
+	<bean name="ticketValidationFilter" class="org.jasig.cas.client.validation.Cas30ProxyReceivingTicketValidationFilter">
+		<property name="service" value="${cas.demo.url}" />
+		<property name="ticketValidator">
+			<bean class="org.jasig.cas.client.validation.Cas30ServiceTicketValidator">
+				<constructor-arg index="0" value="${cas.demo.url}" />
+			</bean>
+		</property>
+	</bean>
+</beans>
